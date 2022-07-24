@@ -2,7 +2,8 @@
     This site helps to demonstrate how a site can look like a good one, but actually not be accessible. 
     Comments detailing some of the issues will be listed, but you can also compare this page to the Good version of the site to find more.
 -->
-<html>
+<!DOCTYPE html>
+<html lang="gd">
     <head>
         <!-- 
             Should include DOCTYPE.
@@ -14,10 +15,13 @@
             Add additional lang attribute to items within the page whose language differs from the main language of the page.
         -->
         <title>Corgidev</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles/normalize.css">
+        <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
         <div id="header">
-            <img src="/img/logo.com" id="logoImg"/>
+            <img src="./images/corgidev-logo.webp" id="logoImg" alt=""/>
             <p id="siteName"></p>
             <div id="navMain">
                 <ul>
@@ -30,11 +34,13 @@
         <div id="mainContent">
             <div id="content">
                 <p class="headerOne">Consequat Esse Reprehenderit-1</p>
+                <img src="./images/corgidev-logo.webp" id="headerOneImg" alt=""/>
                 <p class="paragraphText">Enim magna reprehenderit veniam magna esse id elit elit sit. Non irure sint sunt consequat anim sunt. Culpa ex magna aute eiusmod incididunt.
                     Velit tempor sit incididunt elit irure sit. Aliquip non dolore dolore aute tempor aute officia reprehenderit aute et mollit laboris occaecat est. Excepteur officia ad laborum sit officia. Laboris non nostrud aute est amet officia tempor laboris et nostrud et in Lorem. Tempor non reprehenderit elit nostrud ullamco sit consectetur quis officia.
                     Minim laborum enim quis est fugiat exercitation laborum. Commodo anim exercitation duis consequat laboris officia pariatur. Laborum amet eu nulla mollit laborum ea deserunt enim voluptate aute cillum deserunt adipisicing eiusmod. Et mollit fugiat ea cillum exercitation adipisicing consectetur eu. Cillum ut Lorem incididunt in Lorem quis in ut eiusmod Lorem excepteur est in eiusmod. Esse enim non consequat nisi duis culpa. Mollit ad ullamco ad eu Lorem do cupidatat ea ut occaecat magna mollit sit.
                     Ex exercitation sint excepteur fugiat sunt non esse duis culpa occaecat. Cillum adipisicing ea ipsum irure cupidatat laboris consectetur et excepteur ex sint. Velit culpa non excepteur eu culpa exercitation deserunt. Elit est aliqua veniam consectetur ad officia mollit laborum ea nulla veniam. Dolor in excepteur labore ipsum ullamco consectetur proident deserunt sit commodo sint pariatur non. Sint quis irure enim incididunt nostrud. Cillum officia magna et aliqua in exercitation enim eu in est enim consectetur do elit.
                     Voluptate eu eiusmod non do in commodo excepteur velit et aliquip tempor exercitation. Ipsum do et irure aliqua quis quis ex occaecat tempor laboris commodo culpa dolor. Dolore elit pariatur ea incididunt Lorem irure dolore. Ipsum aute incididunt in do anim nostrud laborum.</p>
+                <p>Example text showing how screen readers read text differently based on the assigned language attribute. Versailles</p>
                 <p class="headerTwo">Proident Ex Ea-2</p>
                 <p class="paragraphText">Enim magna reprehenderit veniam magna esse id elit elit sit. Non irure sint sunt consequat anim sunt. Culpa ex magna aute eiusmod incididunt.
                     Velit tempor sit incididunt elit irure sit. Aliquip non dolore dolore aute tempor aute officia reprehenderit aute et mollit laboris occaecat est. Excepteur officia ad laborum sit officia. Laboris non nostrud aute est amet officia tempor laboris et nostrud et in Lorem. Tempor non reprehenderit elit nostrud ullamco sit consectetur quis officia.

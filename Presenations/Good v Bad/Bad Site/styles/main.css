@@ -6,12 +6,40 @@
 .content{}
 .footer {}
 #paragraphText {}
+.logoImg {
+    max-height: 100px;
+}
 
 /* Navigation Formatting */
 .navMain {}
 .navSecondary {}
 
 /* Header Formatting */
-#headerOne {}
-#headerTwo {}
-#headerThree {}
+/* Learn about default stylings for various HTML elements at the following url: https://www.w3schools.com/cssref/css_default_values.asp */
+#headerOne{
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+#headerTwo {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+#headerThree {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
