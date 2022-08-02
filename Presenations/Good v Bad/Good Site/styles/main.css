@@ -1,17 +1,21 @@
 /* General Formatting */
-
-main{
-    
+.logoHeader {
+    background-color: orange;
 }
 
 #logoImg {
     max-width: 100px;
     text-align: left;
+    display: inline;
+}
+#siteName {
+    display: inline;
 }
 
 /* Navigation Formatting */
 #navMain {
     text-align: center;
+    background-color: tan;
 }
 
 #navMain ul {
@@ -31,4 +35,9 @@ main{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Main Section Formatting */
+main {
+
 }

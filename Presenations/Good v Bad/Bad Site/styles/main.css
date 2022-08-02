@@ -1,19 +1,24 @@
 /* General Formatting */
-.header {}
 .siteName {}
-main {}
-.content{}
-.footer {}
-#paragraphText {}
 
 #logoImg {
     max-width: 100px;
     text-align: left;
+    display: inline;
+}
+
+#siteName {
+    display: inline;
+}
+
+.logoHeader {
+    background-color: orange;
 }
 
 /* Navigation Formatting */
 #navMain {
     text-align: center;
+    background-color: tan;
 }
 
 #navMain ul {
@@ -38,6 +43,7 @@ main {}
     margin-right: 0;
     font-weight: bold;
 }
+
 .headerTwo {
     display: block;
     font-size: 1.5em;
@@ -47,6 +53,7 @@ main {}
     margin-right: 0;
     font-weight: bold;
 }
+
 .headerThree {
     display: block;
     font-size: 1.17em;
@@ -63,3 +70,13 @@ main {}
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Main Content Formatting */
+main {}
+
+.content{}
+
+#paragraphText {}
+
+/* Footer Formatting */
+.footer {}
