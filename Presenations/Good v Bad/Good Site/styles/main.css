@@ -1,6 +1,29 @@
-/* class # */
-/* id . */
 
-.logoImg {
-    max-height: 100px;
+#logoImg {
+    max-width: 100px;
+    text-align: left;
+}
+
+/* Navigation Formatting */
+#navMain {
+    text-align: center;
+}
+
+#navMain ul {
+    list-style-type: none;
+
+}
+
+#navMain li {
+    display: inline-flex;
+}
+
+.navSecondary {}
+
+/* Header Formatting */
+.headerImg {
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

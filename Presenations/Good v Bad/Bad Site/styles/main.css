@@ -1,22 +1,35 @@
 /* General Formatting */
 .header {}
 .siteName {}
-.logoImg {}
 .mainContent {}
 .content{}
 .footer {}
 #paragraphText {}
-.logoImg {
-    max-height: 100px;
+
+#logoImg {
+    max-width: 100px;
+    text-align: left;
 }
 
 /* Navigation Formatting */
-.navMain {}
+#navMain {
+    text-align: center;
+}
+
+#navMain ul {
+    list-style-type: none;
+
+}
+
+#navMain li {
+    display: inline-flex;
+}
+
 .navSecondary {}
 
 /* Header Formatting */
 /* Learn about default stylings for various HTML elements at the following url: https://www.w3schools.com/cssref/css_default_values.asp */
-#headerOne{
+.headerOne{
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
@@ -25,7 +38,7 @@
     margin-right: 0;
     font-weight: bold;
 }
-#headerTwo {
+.headerTwo {
     display: block;
     font-size: 1.5em;
     margin-top: 0.83em;
@@ -34,7 +47,7 @@
     margin-right: 0;
     font-weight: bold;
 }
-#headerThree {
+.headerThree {
     display: block;
     font-size: 1.17em;
     margin-top: 1em;
@@ -42,4 +55,11 @@
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
+}
+
+.headerImg {
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
