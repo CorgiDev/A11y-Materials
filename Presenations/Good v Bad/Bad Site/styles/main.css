@@ -12,6 +12,13 @@
     margin: 10px auto;
 }
 
+#logoImg {
+    max-width: 100px;
+    /* text-align: left; */
+    display: block;
+    margin: 10px auto;
+}
+
 /* Navigation Formatting */
 #navMain {
     text-align: center;
