@@ -3,18 +3,27 @@
     background-color: orange;
 }
 
+#logoHeader {
+    text-align: center;
+    margin: 10px auto;
+}
+
 #logoImg {
     max-width: 100px;
-    text-align: left;
-    display: inline;
+    /* text-align: left; */
+    display: block;
+    margin: 10px auto;
 }
+
 #siteName {
-    display: inline;
+    display: block;
+    text-align: center;
 }
 
 /* Navigation Formatting */
 #navMain {
     text-align: center;
+    margin: 10px auto;
     background-color: tan;
 }
 
@@ -24,8 +33,13 @@
 }
 
 #navMain li {
-    display: inline-flex;
+    display: inline;
 }
+
+#navMain li:first-of-type{
+    padding-right: 15px;
+}
+
 
 .navSecondary {}
 

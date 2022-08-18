@@ -1,23 +1,21 @@
 /* General Formatting */
 .siteName {}
 
-#logoImg {
-    max-width: 100px;
-    text-align: left;
-    display: inline;
-}
-
 #siteName {
-    display: inline;
+    display: block;
+    text-align: center;
 }
 
 .logoHeader {
     background-color: orange;
+    display: block;
+    margin: 10px auto;
 }
 
 /* Navigation Formatting */
 #navMain {
     text-align: center;
+    margin: 10px auto;
     background-color: tan;
 }
 
@@ -27,7 +25,11 @@
 }
 
 #navMain li {
-    display: inline-flex;
+    display: inline;
+}
+
+#navMain li:first-of-type{
+    padding-right: 15px;
 }
 
 .navSecondary {}
