@@ -1,0 +1,140 @@
+/* Header Styles*/
+header {
+  border-color: #f27a2b;
+  background: #bd4b00;
+}
+
+header {
+  min-height: 150px;
+  align-content: end;
+}
+
+/* Navigation Stylings */
+#skip-content {
+  background: #bd4b00;
+  color: white;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#skipContentDiv {
+  margin: 5px 5px;
+}
+
+a {
+  color: #6c4600;
+ }
+ 
+ nav a, nav a:visited, nav a.selected, nav a:hover { /* Keep links in main nav from changing color. They only change appearance when active. */
+   color: #1C0800;
+ }
+
+header nav {
+  background: #f27a2b;
+  min-height: 50px;
+}
+
+.breadcrumbs {
+  background: #933c01;
+  color: white;
+}
+
+.breadcrumbs a:visited {
+  color: white;
+}
+
+.social-icon {
+  color: #733c17;
+}
+
+#navHouse {
+  color: #ffffff;
+}
+
+a {
+  padding: 3px;
+}
+
+nav a.selected, nav a:hover {
+  text-decoration: underline;
+  font-weight:900;
+}
+
+#skip-content {
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+header nav {
+  margin: 0;
+}
+
+header nav ul {
+  padding: 15px 20px 15px 20px;
+  margin-bottom: 0;
+}
+
+header nav a {
+  font-weight: 700;
+  height: 25%;
+  padding: 15px 10px 15px 10px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  align-content: left;
+  display:flex;
+  font-weight: bold;
+  min-height: 5px;
+}
+
+.breadcrumbs nav {
+  align-self: flex-start;
+}
+
+.breadcrumbs ul {
+  margin: 12px;
+}
+
+.breadcrumbs li {
+  padding: 0px;
+}
+
+.newWindowIcon {
+  padding-left: 5px;
+}
+
+header a:hover {
+  outline: auto;
+}
+
+#wrapper a:hover {
+  outline: auto black;
+}
+
+/* nav a.hover, nav a.focus {
+  outline: 4px black;
+} */
+
+/* General Stylings */
+hr {
+  margin-top: 25px;
+}
+
+h1, h2, h3 {
+  color:#733c17;
+}

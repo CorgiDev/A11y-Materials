@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/foundation-icons.css">
+        <link rel="stylesheet" href="css/a11y.css">
+        <title>Testing Pages | Accessibility Presentation</title>
+    </head>
+    <body>
+        <header>
+            <div id="skipContentDiv">
+                <a href="#mainContent" id="skip-content">Skip to main content</a>
+            </div>
+            <nav aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="testing.html" aria-current="page">Testing</a></li>
+                    <li><a href="resources.html">More Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="breadcrumbs" aria-label="Navigation Breadcrumbs">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house fa-lg" id="navHouse"></i><span class="sr-only">Home</span></a></li>
+                <li><i class="fa-solid fa-chevron-right fa-lg"></i> Testing Page</li>
+            </ul>
+        </nav>
+
+        <main id="mainContent">
+            <h1>Testing Page</h1>
+            <p>This site will have a set of test pages you can use to test a variety of screen reader commands and behaviors.</p>
+
+            <!-- <section aria-labelledby="placeholderHeading">
+                <h2 id="placeholderHeading"></h2>
+                <p></p>
+
+                <h3></h3>
+                <p></p>
+            </section>
+            <hr>
+            -->
+
+            <!-- <section aria-labelledby="placeholderHeading">
+                <h2 id="placeholderHeading"></h2>
+                <p></p>
+
+                <h3></h3>
+                <p></p>
+            </section>
+            <hr>
+            -->
+        </main>
+        <footer>
+            <hr>
+            <nav aria-label="Footer Social Links">
+                <ul>
+                    <li><a href="https://www.buymeacoffee.com/TheCorgiDev" aria-label="Buy CorgiDev a Coffee (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-duotone fa-cup-togo fa-2x social-icon"></i></a></li>
+                    <li><a href="http://a11y.info/@CorgiDev" aria-label="CorgiDev on Mastodon (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-mastodon fa-2x social-icon"></i></a></li>
+                    <li><a href="http://facebook.com/corgidev" aria-label="Corgidev on Facebook (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fab fa-facebook-square fa-2x social-icon"></i></a></li>
+                    <li><a href="https://www.instagram.com/corgidev/" aria-label="Corgidev Instagram (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fab fa-instagram fa-2x social-icon"></i></a></li>
+                    <li><a href="https://www.youtube.com/@CorgiDev" aria-label="Corgidev on YouTube (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-youtube fa-2x social-icon"></i></a></li>
+                </ul>
+            </nav>
+            <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
+            <div id="wcagIconContainer">
+                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
+                    <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
+                </a>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/57e0b881dd.js" crossorigin="anonymous"></script>
+        <script src="js/collapsible.js"></script>
+    </body>
+</html>
+
+<!-- <a href="[Placeholder Link]" rel="noopener noreferer" target="_blank">[Placeholder Text]</a> -->
+
+
+<!-- <li>[Placeholder Text]
+    <ul>
+        <li>[Placeholder Text]</li>
+    </ul>
+</li> -->
