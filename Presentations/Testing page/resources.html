@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/combobox.css">
+        <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/foundation-icons.css">
         <link rel="stylesheet" href="css/a11y.css">
+        <link rel="stylesheet" href="css/resources.css">
         <title>Resources Page | Accessibility Presentation</title>
     </head>
     <body>
@@ -31,38 +34,490 @@
         </nav>
 
         <main id="mainContent">
-            <h1>Resources Page</h1>
-            <p>This site will have a set of test pages you can use to test a variety of screen reader commands and behaviors.</p>
+            <h1 id="a11yTitle">Accessibility Resources and Information</h1>
+                <p>All links on this page, outside of those within the header and navigation breadcrumbs, will open in a new window.</p>
+                <p>It is important to note that any guidelines and/or tests listed should not be all you look for when assessing Accessibility. They should just give you a starting point in your overall Accessibility testing straetgy.</p>
+                <p>Most are based primarily on WCAG Guidelines, which, as mentioned in the <a href="https://www.w3.org/TR/WCAG21/#:~:text=content%20more%20accessible.-,Following%20these%20guidelines,-will%20make%20content"  rel="noreferrer noopener" target="_blank">WCAG 2.1 abstract</a>, <q>Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations of these, and some accommodation for learning disabilities and cognitive limitations; but will not address every user need for people with these disabilities.</q></p>
+                <p>We should be regularly building on what we test by using what we, or others, have learned impacts accessibility to improve testing coverage and improve the overall accessibility of our applications, information, and the world around us.</p>
+                <br>
+            
+                <h2 class="a11ySubTitle topHeader">
+                    <button type="button" aria-expanded="false" aria-controls="genResourcesList">
+                        General Information Resources
+                        <svg focusable="false" aria-hidden="true" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4"/>
+                            <rect height="2" width="8" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
 
-            <!-- <section aria-labelledby="placeholderHeading">
-                <h2 id="placeholderHeading"></h2>
-                <p></p>
+                <div hidden id="genResourcesList">
+                    <ul class="siteList">
+                        <li><a href="https://www.a11yproject.com/" rel="noreferrer noopener" target="_blank">The A11y Project</a>
+                            <ul>
+                                <li>
+                                    <p><b>A11y</b> is a numeronym for the word Accessibility. A <b>numeronym</b> is where you form an abbreviation for a word by replacing some letters with numbers. The end word may, or may not, be pronounced similar to the full word.</p>
+                                    <p>A11y stands for the fact that Accessibility begins with the letter A, ends with the letter Y, and has 11 characters in between. It is used to identify content related to digital accessibility in particular. Learn more on the <a href="https://www.a11yproject.com/about/#what-does-the-term-a11y-mean" rel="noreferrer noopener" target="_blank">About page</a> of The A11y Project. <b>The A11y Project</b> is a community-driven effort to make digital accessibility easier.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.w3.org/WAI/ARIA/apg/" rel="noreferrer noopener" target="_blank">ARIA Authoring Practices Guide (APG) - W3C</a>
+                            <ul><li>The ARIA Authoring Practices Guide (APG), by the W3C, helps describe the uses and best practices related to ARIA. The site also provides functional examples and design patterns.</li></ul>
+                        </li>
+                        <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html" rel="noreferrer noopener" target="_blank">ARIA Landmarks Example - W3C</a>
+                            <ul><li>This W3C article describes how landmarks help users identify content structures and gives visual examples.</li></ul>
+                        </li>
+                        <li><a href="http://www.bbc.co.uk/accessibility/" rel="noreferrer noopener" target="_blank">BBC's My Web My Home page</a>
+                            <ul><li>This page is archived and no longer being updated, but still serves as a great reference page to see Accessibility information divided up into different categories based on need.</li></ul>
+                        </li>
+                        <li><a href="https://www.deque.com/web-accessibility-beginners-guide/" rel="noreferrer noopener" target="_blank">Beginner's Guide to Accessibility - Deque</a>
+                            <ul><li>Deque is an Accessibility focused company whose Accessibility Assesment application, Axe, is a part of many other well known Accessibility assessment tools, including the Lighthouse tab in Google Chrome's Developer Tools and Microsoft's Accessibility Insights. In this article, they break down some information that is important for anyone wanting to learn more about Accessibility.</li></ul>
+                        </li>
+                        <li><a href="https://www.deque.com/blog/" rel="noreferrer noopener" target="_blank">Deque Blog</a>
+                            <ul><li>The Deque Blog that features articles on various topics relating to Accessibility.</li></ul>
+                        </li>
+                        <li><a href="https://moritzgiessmann.de/accessibility-cheatsheet/" rel="noreferrer noopener" target="_blank">Moritz Geissmann's Accessibility Cheatsheet</a>
+                            <ul><li>This is an awesome cheat sheet made by Moritz Geissman. It makes for a great condensed poster you can have available for quick reference.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
 
-                <h3></h3>
-                <p></p>
-            </section>
-            <hr>
-            -->
+                    <h3>Accessibility Organizations</h3>
+                        <ul class="siteList">
+                            <li><a href="https://www.atia.org/home/at-resources/what-is-at/#what-is-assistive-technology" rel="noreferrer noopener" target="_blank">Assistive Technology Industry Association(ATiA)</a>
+                                <ul><li>This page lists some great information about Assistive Technologies and the Assistive Technology Industry Association.</li></ul>
+                            </li>
+                            <li><a href="https://www.aph.org" rel="noreferrer noopener" target="_blank">American Printing House for the Blind</a>
+                                <ul><li>The American Printing House is an amazing non-profit that specializes in educational aids, books, audio content, and more for indiviudals with visual accessibility needs. They have been serving the blind and visually impaired community for over 160 years. You can learn about visual accessibility in so many ways from them.</li></ul>
+                            </li>
+                            <li><a href="https://aphaccessibility.com/" rel="noreferrer noopener" target="_blank">APH Accessibility Hub</a>
+                                <ul><li>An awesome resource created by the Accessibility Comittee at the American Printing House for the Blind.</li></ul>
+                            </li>
+                            <li><a href="https://www.visionaware.org/" rel="noreferrer noopener" target="_blank">VisionAware</a>
+                                <ul><li>VisionAware is a great resource for those in the process of losing their sight, as well as their friends and family.</li></ul>
+                            </li>
+                            <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                        </ul>
 
-            <!-- <section aria-labelledby="placeholderHeading">
-                <h2 id="placeholderHeading"></h2>
-                <p></p>
+                    <h3>Accessible Design</h3>
+                        <ul class="siteList">
+                            <li><a href="https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/" rel="noreferrer noopener" target="_blank">Dos and Don'ts on Designing for Accessibility</a>
+                                <ul><li>This is a great blog post of some example dos and don'ts to keep in mind when designing for Accessibility, and some amazing reference posters.</li></ul>
+                            </li>
+                            <li><a href="https://inclusive-components.design/" rel="noreferrer noopener" target="_blank">Inclusive Components by Heydon Pickering</a>
+                                <ul><li>A web version of the Inclusive Components book by Heydon Pickering. Learn ways to make accessible versions of various common web components.</li></ul>
+                            </li>
+                            <li><a href="https://www.creativebloq.com/advice/8-steps-to-inclusive-web-design" rel="noreferrer noopener" target="_blank">8 Steps to Inclusive Web Design</a>
+                                <ul><li>The 8 steps in this article give you a good idea of how to prepare to design an accessible site.</li></ul>
+                            </li>
+                            <li><a href="https://gerireid.com/index.html" rel="noreferrer noopener" target="_blank">Geri Reid - UI & UX Designer</a>
+                                <ul><li>Geri Reid has some wonderful resources under the "Work" section of her site, including an Accessibility case study, WCAG for Designers, and an article on Form Design.</li></ul>
+                            </li>
+                            <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                        </ul>
 
-                <h3></h3>
-                <p></p>
-            </section>
-            <hr>
-            -->
+                    <h3>Accessibility Personas</h3>
+                        <ul class="siteList">
+                            <li><a href="https://uxdesign.cc/creating-accessibility-personas-e7749d4096b4" rel="noreferrer noopener" target="_blank">Creating accessibility personas. | by Alicia Crowther | UX Collective</a></li>
+                            <li><a href="https://medium.com/swlh/personas-with-disabilities-9da8d12f1255" rel="noreferrer noopener" target="_blank">Personas with Disabilities | by Sheri Byrne-Haber, CPACC | The Startup | Medium</a></li>
+                            <li><a href="https://alphagov.github.io/accessibility-personas/" rel="noreferrer noopener" target="_blank">Accessibility Personas | UK Government Digital Service GitHub</a></li>
+                            <li><a href="https://uit.stanford.edu/accessibility/design-personas" rel="noreferrer noopener" target="_blank">Design Personas: Digital Accessibility Recommendations for Interactive Designs | Office of Digital Accessibility | Stanford University</a></li>
+                            <li><a href="https://www.boia.org/blog/tips-for-creating-accessibility-personas" rel="noreferrer noopener" target="_blank">Tips for Creating Accessibility Personas | Bureau of Internet Accessibility</a></li>
+                            <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                        </ul>
 
-            <!-- <section aria-labelledby="placeholderHeading">
-                <h2 id="placeholderHeading"></h2>
-                <p></p>
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                    <br>
+                </div>
 
-                <h3></h3>
-                <p></p>
-            </section>
-            <hr>
-            -->
+                <h2 class="a11ySubTitle">
+                    <button type="button" aria-expanded="false" aria-controls="raList">
+                        Reasonable Accommodations (RA)
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4" />
+                            <rect height="2" width="8" y="4" x="1" />
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden id="raList">
+                    <h3>Government RA Documentation</h3>
+                        <ul class="siteList">
+                            <li><a href="https://odr.dc.gov/book/manual-accommodating-employees-disabilities/types-reasonable-accommodation" rel="noreferrer noopener" target="_blank">Types of RA | Office of Disability Rights (ODR)</a></li>
+                            <li><a href="https://odr.dc.gov/book/manual-accommodating-employees-disabilities/when-can-district-deny-accommodation" rel="noreferrer noopener" target="_blank">When Can the District Deny an Accommodation? | Office of Disability Rights (ODR)</a></li>
+                            <li><a href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada" rel="noreferrer noopener" target="_blank">Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA | U.S. Equal Employment Opportunity Commission (EEOC)</a></li>
+                            <li><a href="https://www.dol.gov/agencies/odep/program-areas/employers/accommodations" rel="noreferrer noopener" target="_blank">Accommodations | U.S. Department of Labor (DOL)</a></li>
+                            <li><a href="https://www.ada.gov/" rel="noreferrer noopener" target="_blank">The Americans with Disabilities Act | ADA.gov</a></li>
+                            <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                        </ul>
+                    
+                    <h3>Misc RA Documentation</h3>
+                        <ul class="siteList">
+                            <li><a href="https://askjan.org/publications/employers/employers-guide.cfm" rel="noreferrer noopener" target="_blank">Employers' Practical Guide to Reasonable Accommodation Under the Americans with Disabilities Act (ADA) - Job Accommodation Network (JAN)</a></li>
+                            <li><a href="https://www.afb.org/research-and-initiatives/employment/workplace-tech-study/accommodations-and-accessibility" rel="noreferrer noopener" target="_blank">Accommodations and Accessibility | American Foundation for the Blind</a></li>
+                            <li><a href="https://alsoweb.org/what-is-ada-compliance/" rel="noreferrer noopener" target="_blank">What is ADA Compliance | ADA Compliant Business - Advocates for the Life Skills & Opportunity (ALSO)</a></li>
+                            <li><a href="https://pva.org/news-and-media-center/recent-news/americans-with-disabilities-act-ada-myths-and-fa/" rel="noreferrer noopener" target="_blank">Americans With Disabilities Act (ADA) Myths And Facts - Paralyzed Veterans of America (PVA)</a></li>
+                            <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                        </ul>
+
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                    <br>
+                </div>
+
+                <h2 class="a11ySubTitle">
+                    <button type="button" aria-expanded="false" aria-controls="guidelinesList">
+                        Guidelines & Standards           
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4" />
+                            <rect height="2" width="8" y="4" x="1" />
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden id="guidelinesList">
+                    <ul class="siteList">
+                        <li><a href="https://www.w3.org/TR/WCAG21/" rel="noreferrer noopener" target="_blank">WCAG 2.1</a>
+                            <ul><li>WCAG stands for Web Content Accessibility Guidelines. These are international guidelines developed by the W3C WAI. Version 2.1 was released in June 2018.</li></ul>
+                        </li>
+                        <li><a href="https://www.w3.org/TR/ATAG20/" rel="noreferrer noopener" target="_blank">ATAG 2.0</a>
+                            <ul><li>ATAG stands for Authoring Tool Accessibility Guidelines. These are international guidelines developed by the W3C WAI. Version 2.0 was released in September 2015.</li></ul>
+                        </li>
+                        <li><a href="https://www.w3.org/TR/UAAG20/" rel="noreferrer noopener" target="_blank">UAAG 2.0</a>
+                            <ul><li>UAAG stands for User Agent Accessibility Guidelines. These are international guidelines developed by the W3C WAI. Version 2.0 was released in December 2015.</li></ul>
+                        </li>
+                        <li><a href="https://www.section508.gov/" rel="noreferrer noopener" target="_blank">Section 508</a>
+                            <ul><li>Section 508 of the Rehabilitation Act of 1973, handles accessibility of information and technology. They primarily apply to federal agencies and contractors. Section 508 received a refresh in January 2017.</li></ul>
+                        </li>
+                        <li><a href="https://www.bbc.co.uk/gel" rel="noreferrer noopener" target="_blank">BBC Global Experience Language (GEL)</a>
+                            <ul><li>This page is where the BBC stores all of their UX/UD guidelines, tutorials, and more for everyone to view and benefit from.</li></ul>
+                        </li>
+                        <li><a href="https://www.bbc.co.uk/gel/guidelines" rel="noreferrer noopener" target="_blank">BBC Global Experience Language</a>
+                            <ul><li>This page highlights all of the UX Guidelines followed by the BBC. They are a great example of clear guidelines that help to improve the user experience for everyone visiting their sites.</li></ul>
+                        </li>
+                        <li><a href="https://www.html5accessibility.com/" rel="noreferrer noopener" target="_blank">HTML5 Accessibility</a>
+                            <ul><li>This page shows well various browsers support Accessibility.</li></ul>
+                        </li>
+                        <li><a href="https://m3.material.io/foundations/accessible-design/overview" rel="noreferrer noopener" target="_blank">Accessibility - Material Design</a>
+                            <ul><li>Learn about how Accessibility is a foundational design value for the Material design system.</li></ul>
+                        </li>
+                        <li><a href="https://help.figma.com/hc/en-us/articles/7810391964695-Accessible-prototypes-in-Figma" rel="noreferrer noopener" target="_blank">Accessible prototypes in Figma</a>
+                            <ul><li>The general idea of Accessible prototypes in Figma, is that they will allow users to navigate with a supported screen reader. As of September 2022, accessible prototypes are currently in open beta.</li></ul>
+                        </li>
+                        <li><a href="https://guia-wcag.com/en/" rel="noreferrer noopener" target="_blank">WCAG Guide</a>
+                            <ul><li>A set of amazing virtual flash cards that can be used as a useful reference of the WCAG 2.1 Guidelines and Success Criteria.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                    <br>
+                </div>
+
+                <h2 class="a11ySubTitle">
+                    <button type="button" aria-expanded="false"  aria-controls="reportingResourcesList">
+                        Reporting/Testing Resources
+                        <svg focusable="false" aria-hidden="true" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4"/>
+                            <rect height="2" width="8" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden id="reportingResourcesList">
+                    <p>Many of the Accessibility testing tools and resources I have learned about over the years are listed is this section. Additionally, the W3C has an awesome <a href="https://www.w3.org/WAI/ER/tools/" rel="nonreferrer noopener" target="_blank">Web Accessibility Evaluation Tools List</a> page.</p>
+                    
+                    <h3>Bookmarklets</h3>
+                    <ul class="siteList">
+                        <li><a href="https://dylanb.github.io/bookmarklets.html" rel="noreferrer noopener" target="_blank">A11y Bookmarklets from Dylan Barrell</a>
+                            <ul><li>A Github.io page, created by Dylan Barrell, that has a useful bookmarklet that lets you test for conformance the WCAG's 1.4.12 Text Spacing success criterion.</li></ul>
+                        </li>                        
+                        <li><a href="https://accessibility-bookmarklets.org" rel="noreferrer noopener" target="_blank">Accessibility Bookmarklets</a>
+                            <ul><li>The Accessibility bookmarklets on this page were created by <a href="http://pixotech.com/" rel="noreferrer noopener" target="_blank">Pixo</a> and <a href="http://disability.illinois.edu/" rel="noreferrer noopener" target="_blank">Disability Resources and Education Services (DRES)</a> at the <a href="https://illinois.edu/" rel="noreferrer noopener" target="_blank">University of Illinois at Urbana Champaign</a></li></ul>
+                        </li>                        
+                        <li><a href="https://www.ssa.gov/accessibility/andi/help/install.html" rel="noreferrer noopener" target="_blank">Accessible Name & Description Inspector (ANDI)</a>
+                            <ul><li>ANDI is a tool developed by the Social Security Administration (SSA) for use in Section 508 Conformance testing. It functions as a browser bookmarklet that lets you display an overlay to identify potential accessibility issues in the currently selected web page.</li></ul>
+                        </li>                        
+                        <li><a href="https://pauljadam.com/bookmarklets/" rel="noreferrer noopener" target="_blank">JavaScript Bookmarklets for Accessibility Testing</a>
+                            <ul><li>A set of useful JavaScript bookmarklets, developed by Paul J Adam, that can assist you with testing various elements of accessibility in a website.</li></ul>
+                        </li>                        
+                        <li><a href="https://holistica11y.com/find-landmarks-on-web-page-with-a11y-bookmarklet/" rel="noreferrer noopener" target="_blank">Holistic Accessibility Landmark Bookmarklet</a>
+                            <ul><li>The Holistic Accessibility Landmark Bookmarklet highlights all ARIA landmarks, including HTML5 tags that are interpreted as landmarks.</li></ul>
+                        </li>                        
+                        <li><a href="https://holistica11y.com/verify-lang-attribute-using-a-a11y-bookmarklet/" rel="noreferrer noopener" target="_blank">Holistic Accessibility Language Verification Bookmarklet</a>
+                            <ul><li>The Holistic Accessibility Language Verification Bookmarklet identifies the page-wide language attribute, if present, and any language attributes added to content within the webpage.</li></ul>
+                        </li>                        
+                        <li><a href="https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/" rel="noreferrer noopener" target="_blank">WCAG 2.1 parsing error bookmarklet - TPGi</a>
+                            <ul><li>Bookmarklet for checking for parsing errors related to WCAG 2.0.</li></ul>
+                        </li>
+                        <li><a href="https://github.com/stevefaulkner/targetsize/blob/main/bookmarklet.md" rel="nonreferrer noopener" target="_blank">Target Size Testing Bookmarklet by Steve Faulkner</a>
+                            <ul><li>From the repo's ReadMe file, <q>Scripted aid to identifying overlapping targets. It is meant to help test WCAG 2.2 Success Criterion 2.5.8 Target Size (Minimum)</q></li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Browser Extensions</h3>
+                    <ul class="siteList">
+                        <li><a href="https://accessibilityinsights.io/">Accessibility Insights</a>
+                            <ul><li>Accessibility Insights is a set of tools developed by Microsoft that are open source and available for free as a Windows application, Chromium browser extension, and more to assist with automated and manual Accessibility testing.</li></ul>
+                        </li>
+                        <li><a href="https://docs.deque.com/devtools-html/4.0.0/en/devtools-extension" rel="noreferrer noopener" target="_blank">axe DevTools</a>
+                            <ul><li>axe DevTools are a set of tools that can be installed in FireFox, Google Chrome, and Microsoft Edge browsers that can be used to assist with automated and manual accessibility testing.</li></ul>
+                        </li>
+                        <li><a href="https://darkreader.org/" rel="noreferrer noopener" target="_blank">Dark Reader</a>
+                            <ul><li>Dark Reader allows you to simulate a dark mode look on individual websites. This browser extension is available on Chrome, Edge, FireFox, and Safari. It can be enabled to be on all the time, or per site. Great for simulating what a dark mode custom style sheet might make your site look like and to ease the strain on your own eyes.</li></ul>
+                        </li>
+                        <li><a href="http://matatk.agrip.org.uk/landmarks/" rel="noreferrer noopener" target="_blank">Landmark Navigation via Keyboard or Pop-Up</a>
+                            <ul><li>This simple browser extension allows you to view the landmark regions on a page and then navigate through them in a way similar to how some screen readers, and other assistive technologies, may allow a user to do so. It is available for FireFox, Chrome, Edge, and Opera.</li></ul>
+                        </li>
+                        <li><a href="https://nighteye.app/" rel="noreferrer noopener" target="_blank">Night Eye</a>
+                            <ul><li>Night Eye is a useful, lightweight browser extension that helps transform pages into a dark mode view automatically, or per site. Useful for getting an idea of how your page might look with a dark mode stylesheet applied, or to help lessen the strain on your own eyes as you work. It is available for a variety of different browsers and applications.</li></ul>
+                        </li>
+                        <li><a href="https://wave.webaim.org/" rel="noreferrer noopener" target="_blank">Web Accessibility Evaluation Tool (WAVE)</a>
+                            <ul><li>WAVE is available as a browser extension and through a web page UI. This nifty tool allows you to view an overlay over a page to help identify potential Accessibility issues. It was developed by the Institute for Disability Research, Policy, and Practice at Utah State University. Additional tools they have developed can be found by navigating to their <a href="https://webaim.org/" rel="noreferrer noopener" target="_blank">WebAIM site</a>.</li></ul>
+                        </li>
+                        <li><a href="https://coolx10.com/window-resizer/" rel="noreferrer noopener" target="_blank">Window Resizer</a>
+                            <ul><li>Window Resizer is a browser extension available for Chrome and Microsoft Edge, through the Chrome App Store. The extension allows you to test how your site will resize at different window sizes and view the current size of your browser window if you want an easy way to tell what sizes you may need media queries for.</li></ul>
+                        </li>
+                        <li><a href="https://chrispederick.com/work/web-developer/" rel="noreferrer noopener" target="_blank">Web Developer - Chris Pederick</a>
+                            <ul><li>The Web Developer browser extension has a variety of modules that allow you to check various aspects of a website. These tools can be used for general troubleshooting while building a site and/or Accessibility testing.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Desktop Applications</h3>
+                    <ul class="siteList">
+                        <li><a href="https://www.tpgi.com/color-contrast-checker/" rel="noreferrer noopener" target="_blank">Color Contrast Analyzer (CCA)</a>
+                            <ul><li>The CCA application, is a free tool developed by <a href="https://www.tpgi.com/" rel="nonreferrer noopener" target="_blank">TPGi</a> to allow users to test contrast between colors to identify whether the combination would meet WCAG AA and AAA confromance.</li></ul>
+                        </li>
+                        <li><a href="https://trace.umd.edu/peat/" rel="noreferrer noopener" target="_blank">Photosensitive Epilepsy Analysis Tool (PEAT)</a>
+                            <ul>
+                                <li>The PEAT tool is developed by the <a href="https://trace.umd.edu/" rel="nonreferrer noopener" target="_blank">Trace Center at the University of Maryland</a>. The tool was last updated in 2017. I was able to get it to work on some Windows 10 systems, but not all, and was unable to get it to work on Windows 11 at all. However, they are supposed to be working on an update, but there is no timeline for that.</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://pdfua.foundation/en/" rel="noreferrer noopener" target="_blank">PDF Accessibility Checker (PAC)</a>
+                            <ul>
+                                <li>PAC was developed by the PDF/UA Foundation and is an automated tool to assist with testing PDF accessibility.</li>
+                            </ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Web Applications</h3>
+                    <ul class="siteList">
+                        <li><a href="https://www.myndex.com/APCA/" rel="noreferrer noopener" target="_blank">APCA Contrast Calculator</a>
+                            <ul><li>The APCA Contrast Calculator, developed by <a href="https://www.myndex.com/" rel="noreferrer noopener" target="_blank">Myndex Technologies</a>, is a web application that can be used to decide whether or not 2 colors will have proper contrast when adjacent to one another.</li></ul>
+                        </li>
+                        <li><a href="https://validator.w3.org/nu/" rel="noreferrer noopener" target="_blank">W3C Nu Html Checker</a>
+                            <ul><li>The Nu Html Checker from the W3C helps to check for potential parsing errors in a page's HTML. This is important for ensuring conformance to WCAG's 4.1.1 Parsing Success Criterion.</li></ul>
+                        </li>
+                        <li><a href="https://validator.w3.org/" rel="noreferrer noopener" target="_blank">W3C Markup Validation Service</a>
+                            <ul><li>The W3C's Markup Validation Service page is another tool you can use to identify potential parsing issues that could result in failing WCAG's 4.1.1 Parsing Success Criterion.</li></ul>
+                        </li>
+                        <li><a href="https://coolors.co/?ref=645aeaf4aeb5b7000b07496c" rel="noreferrer noopener" target="_blank">Coolors Tools</a>
+                            <ul><li>Coolors by Fabrizio Bianchi is a site that has a lot of tools, free and paid, that can be used to help with checking color contrast, selecting color palletes, and more. Some of the tools can integrate with other common design tools, like Figma and Adobe. I found the site because of their free Color Contrast Checker that has a simple and clean interface. In particular, I like it because, if your color combination does not meet WCAG guidelines, it provides an option for recommendations based on changing the font color or the background color.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Other Tools</h3>
+                    <ul class="siteList">
+                        <li><a href="https://accessibility.deque.com/linter-contact-us" rel="noreferrer noopener" target="_blank">axe Linter</a>
+                            <ul><li>axe Linter is a tool developed by Deque that can be used with VSCode, GitHub Actions, and more to help developers identify potential accessibility issues in their code base. However, unlike some of the other tools listed here, it is not free. Though they do offer a free trial.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Example Testing Processes</h3>
+                    <ul class="siteList">
+                        <li><a href="https://developer.visa.com/pages/accessibility" rel="noreferrer noopener" target="_blank">Visa Global Accessibility Requirements (VGAR)</a>
+                            <ul><li>A set of 120+ requirrements crafted by Visa Developers and Designers to help maintain Accessibility compliance.</li></ul>
+                        </li>
+                        <li><a href="https://ictbaseline.access-board.gov/" rel="noreferrer noopener" target="_blank">Section 508 ICT Testing Baseline</a>
+                            <ul><li>Defines the minimum requirements of any test process used for Section 508 conformance testing.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Accessibility Report Tools</h3>
+                    <p>While many of these tools have their repos open to the public, it is important to check the licenses of the repos before making nay modifications or using them to ensure you are in compliance.</p>
+                    <ul>
+                        <li><a href="https://github.com/w3c/wai-wcag-em-report-tool" rel="noreferrer noopener" target="_blank">WCAG-EM Report Tool</a>
+                            <ul><li>Per the Readme for this repo, <q>The WCAG-EM Report tool is an assistant that takes the user through the process of evaluating the accessibility of a website, using the WCAG Evaluation Methodology.</q></li></ul>
+                        </li>
+                        <li><a href="https://www.section508.gov/sell/vpat/" rel="nonreferrer noopener" target="_blank">Voluntary Product Accessibility Template (VPAT™) - Section 508</a>
+                            <ul><li>Per the Section 508 site's VPAT page, "A Voluntary Product Accessibility Template (VPAT™) is a document that explains how information and communication technology (ICT) products such as software, hardware, electronic content, and support documentation meet (conform to) the Revised 508 Standards for IT accessibility. VPAT™ help Federal agency contracting officials and government buyers to assess ICT for accessibility when doing market research and evaluating proposals."</li></ul>
+                        </li>
+                        <li><a href="https://github.com/GSA/openacr" rel="noreferrer noopener" target="_blank">Open by the US General Services Administration (GSA)</a>
+                            <ul><li>Reporting tool developed by the GSA for Section 508 Conformance testing.</li></ul>
+                        </li>
+                        <li><a href="https://github.com/Section508Coordinators/ACRT" rel="noreferrer noopener" target="_blank">Accessibility Conformance Reporting Tool (ACRT) by the Department of Homeland Security</a>
+                            <ul><li>A standalone, browser based Section 508 Conformance reporting tool.</li></ul>
+                        </li>
+                        <li><a href="https://alpha.hugr.app/dashboard" rel="noreferrer noopener" target="_blank">HUGR by Dig Inclusion Ltd.</a>
+                            <ul><li>HUGR helps you create accessibility conformance reports that follow WCAG 2.1 based testing methodology. More information is available on the following Gov.UK site, <a href="https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/108073003405112" rel="nonreferrer noopener" target="_blank">Hugr: Accessibility auditing software</a>. The application is available at <a href="https://alpha.hugr.app/dashboard" rel="noreferrer noopener" target="_blank">HUGR app</a>.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                    <br>
+                </div>
+
+                <h2 class="a11ySubTitle">
+                    <button type="button" aria-expanded="false" aria-controls="learningOpprotunitiesList">
+                        Learning Opprotunities
+                        <svg focusable="false" aria-hidden="true" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4"/>
+                            <rect height="2" width="8" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden id="learningOpprotunitiesList">
+                    <h3>General Training</h3>
+                    <ul class="siteList">
+                        <li><a href="https://uebonline.org/" rel="noreferrer noopener" target="_blank">UEB Online</a>
+                            <ul><li>A free online course in Braille. Great for those who just wish to learn or those who wish to make Braille a part of their career.</li></ul>
+                        </li>
+                        <li><a href="https://trailhead.salesforce.com/users/corgidev/trailmixes/accessibility" rel="noreferrer noopener" target="_blank">Accessibility & Inclusion Trailmix</a>
+                            <ul><li>A custom Trailmix I made on Salesforce's Trailhead learning platform that consists of various Accessibility and Inclusion related content I have been completing.</li></ul>
+                        </li>
+                        <li><a href="https://app.pluralsight.com/channels/details/5ada4398-98d5-4637-9fba-321626550b97?s=1" rel="noreferrer noopener" target="_blank">Custom Pluralsight Accessibility Channel</a>
+                            <ul><li>A custom playlist of Accessibility courses and videos I have found on Pluralsight.</li></ul>
+                        </li>
+                        <li><a href="https://docs.microsoft.com/en-us/users/corgidev/collections/xzgt8k2n2gqkj" rel="noreferrer noopener" target="_blank">Accessibility Collection on Microsoft Learn</a>
+                            <ul><li>A custom collection of Accessibility content I have found on the Microsoft Learn site.</li></ul>
+                        </li>
+                        <li><a href="https://dequeuniversity.com/" rel="noreferrer noopener" target="_blank">Deque University</a>
+                            <ul><li>Per the Deque University website, <q>Deque University offers training and on-demand reference materials for every level and every area of expertise in digital accessibility.</q> There are some free resources, but much of the content does require payment on a annual basis to maintain access to. They have groups of content particularly geared towards specific areas of accessibility, roles, and/or accessibility certifications.</li></ul>
+                        </li>
+                        <li><a href="https://www.edx.org/course/web-accessibility-introduction" rel="noreferrer noopener" target="_blank">Introduction to Web Accessibility - W3C - edX</a>
+                            <ul><li>Free course on edX created by W3C that provides a strong foundation in Digital Accessibility.</li></ul>
+                        </li>
+                        <li><a href="https://web.dev/learn/accessibility/" rel="noreferrer noopener" target="_blank">Learn Accessibility - web.dev</a>
+                            <ul><li>An evergreen Accessibility course and reference on web.dev, which is under Google Developers.</li></ul>
+                        </li>
+                        <li><a href="https://digital.gov/resources/introduction-accessibility/" rel="noreferrer noopener" target="_blank">Digital.gov - Introduction to Accessibility</a>
+                            <ul><li>An awesome article by <a href="">Digital.gov</a> providing an introduction to Accessibility.</li></ul>
+                        </li>
+                        <li><a href="https://webaim.org/intro/" rel="noreferrer noopener" target="_blank">WebAIM - Introduction to Web Accessibility</a>
+                            <ul><li>An introduction to accessibility by WebAIM with additional links to a wealth of information and examples.</li></ul>
+                        </li>
+                        <li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" rel="noreferrer noopener" target="_blank">W3C - WAI - Introduction to Web Accessibility</a>
+                            <ul><li>An introduction to web accessibility by the W3C's Web Accessibility Initiative (WAI).</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <h3>Assistive Technology Use</h3>
+
+                    <h4 id="generalScreenreader">General Screenreader Resources</h4>
+                    <ul class="siteList" aria-describedby="generalScreenreader">
+                        <li><a href="https://dequeuniversity.com/screenreaders/" rel="noreferrer noopener" target="_blank">Screen Reader Keyboard Shortcuts and Gestures - Deque University</a></li>
+                        <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                    </ul>
+
+                    <h4 id="nvdaScreenreader">NVDA from NV Access</h4>
+                    <ul class="siteList" aria-describedby="nvdaScreenreader">
+                        <li><a href="https://www.youtube.com/watch?v=Jao3s_CwdRU" rel="noreferrer noopener" target="_blank">Screen Reader Basics: NVDA -- A11ycasts #09 - YouTube</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PL4m4IqMolRpKUB7DGO3zA_aWdOeHigkRz" rel="noreferrer noopener" target="_blank">Learn Tech - YouTube Playlist</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=NioaWaaQCqM" rel="noreferrer noopener" target="_blank">Preparing for Work with Accessible Technology Solutions - YouTube</a></li>
+                        <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                    </ul>
+
+                    <h4 id="jawsScreenreader">JAWS from Freedom Scientific</h4>
+                    <ul class="siteList" aria-describedby="jawsScreenreader">
+                        <li><a href="https://www.youtube.com/@FreedomScientificTraining" rel="noreferrer noopener" target="_blank">Freedom Scientific Training - YouTube Channel</a></li>
+                        <li><a href="https://www.freedomscientific.com/training/jaws/hotkeys/" rel="noreferrer noopener" target="_blank">JAWS Hotkeys - Freedom Scientific</a></li>
+                        <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                    </ul>
+
+                    <h4 id="zoomTextResources">ZoomText from Freedom Scientific</h4>
+                    <ul class="siteList" aria-describedby="zoomTextResources">
+                        <li><a href="https://www.freedomscientific.com/training/zoomtext/getting-started/" rel="noreferrer noopener" target="_blank">Getting Started with ZoomText - Freedom Scientific</a></li>
+                        <li><a href="https://www.freedomscientific.com/training/zoomtext/zoomtext-hotkeys/" rel="noreferrer noopener" target="_blank">ZoomText Hotkeys - Freedom Scientific</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLk-npwu4WEBQRbTt4YGaGCfDh3IQzUYtJ" rel="noreferrer noopener" target="_blank">ZoomText Videos - YouTube Playlist</a></li>
+                        <!-- <li><a href="" rel="noreferrer noopener" target="_blank"></a></li> -->
+                    </ul>
+                    
+                    <br>
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                    <br>
+                </div>
+
+                <h2 class="a11ySubTitle">
+                    <button type="button" aria-expanded="false" aria-controls="videosList">
+                        Videos
+                        <svg focusable="false" aria-hidden="true" viewBox="0 0 10 10">
+                            <rect class="vert" height="8" width="2" y="1" x="4"/>
+                            <rect height="2" width="8" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden id="videosList">
+                    <ul class="siteList">
+                        <li><a href="https://youtube.com/playlist?list=PLsGBrIJ5Q11YoM6vheqBS9LdMyjhjzKUY" rel="noreferrer noopener" target="_blank">Accessibility & Inclusion YouTube PlayList</a>
+                            <ul><li>This is a playlist I put together of a variety of Accessibility and Inclusion related videos I have found on YouTube. I try to regularly update it as I find new videos.</li></ul>
+                        </li>
+                        <li><a href="https://www.youtube.com/@CorgiDev" rel="noreferrer noopener" target="_blank">CorgiDev on YouTube</a>
+                            <ul><li>My personal YouTube channel where I put a few videos I made as I learn about particular Accessibility topics.</li></ul>
+                        </li>
+                        <li><a href="https://www.instagram.com/jeremyandrewdavis/"  rel="noreferrer noopener" target="_blank">Jeremy Andrew Davis on Instagram</a>
+                            <ul><li>One of my favorite Instagram channels. Jeremy shares loads of awesome content on a variety of Accessibility topics with a large focus on Cognitive conditions like Autism and ADHD. His content succeeds at being fun and informative.</li></ul>
+                        </li>
+                        <!-- <li><a href="[PlaceholderText]" rel="noreferrer noopener" target="_blank">[PlaceholderText]</a>
+                            <ul>
+                                <li>[PlaceholderText]</li>
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                    <span class="returnToTop"><a href="#a11yContent">Return to Top</a></span>
+                </div>
         </main>
         <footer>
             <hr>
@@ -75,15 +530,19 @@
                     <li><a href="https://www.youtube.com/@CorgiDev" aria-label="Corgidev on YouTube (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-youtube fa-2x social-icon"></i></a></li>
                 </ul>
             </nav>
-            <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
-            <div id="wcagIconContainer">
-                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
-                    <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
-                </a>
+            <div id="footerExtraContent">
+                <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
+                <div id="wcagIconContainer">
+                    <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
+                        <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
+                    </a>
+                </div>
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/57e0b881dd.js" crossorigin="anonymous"></script>
         <script src="js/collapsible.js"></script>
+        <script src="js/combobox.js"></script>
+        <script src="js/datepicker.js"></script>
     </body>
 </html>
 

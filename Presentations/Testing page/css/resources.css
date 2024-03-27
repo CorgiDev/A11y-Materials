@@ -1,0 +1,90 @@
+/******************************************
+PAGE: ACCESSIBILITY
+******************************************/
+/* General */
+#a11yTitle {
+    display: block;
+    text-align: center;
+}
+
+.returnTop a {
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+/* General Headings */
+h4 {
+    margin-top: 15px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Collapsible Secttion Styles */
+main h2 {
+    margin: 0;
+}
+
+main h2+div {
+    padding-bottom: 1.5rem;
+}
+
+main h2 {
+    border-top: 2px solid;
+    min-width: 100%;
+}
+
+main {
+    border-bottom: 2px solid #733c17;
+}
+
+h2 button {
+    all: inherit;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+h2 button:focus svg {
+    outline: 2px solid;
+}
+
+button svg {
+    height: 1em;
+    margin-left: 0.5em;
+}
+
+[aria-expanded="true"] .vert {
+    display: none;
+}
+
+[aria-expanded] rect {
+    fill: currentColor;
+}
+
+/* List Stylings */
+.siteList {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.siteList ul, .siteList li {
+    list-style-type: none;
+}
+
+.siteList dt {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+
+dl {
+    margin-left: 10px;
+    padding-left: 10px;
+}

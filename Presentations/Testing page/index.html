@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/combobox.css">
+        <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/foundation-icons.css">
         <link rel="stylesheet" href="css/a11y.css">
         <title>Accessibility Presentation</title>
@@ -22,7 +24,7 @@
                 </ul>
             </nav>
         </header>
-        <nav aria-label="Breadcrumbs" aria-hidden="true"><ul><li></li></ul></nav>
+        <div class="breadcrumbs"></div>
         <main id="mainContent">
             <h1>CorgiDev Accessibility Presentation Page</h1>
             <p>This site will have a set of test pages you can use to test a variety of screen reader commands and behaviors.</p>
@@ -78,23 +80,20 @@
                     <li><a href="https://www.youtube.com/@CorgiDev" aria-label="Corgidev on YouTube (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-youtube fa-2x social-icon"></i></a></li>
                 </ul>
             </nav>
-            <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
-            <div id="wcagIconContainer">
-                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
-                    <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
-                </a>
+            <div id="footerExtraContent">
+                <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
+                <div id="wcagIconContainer">
+                    <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
+                        <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
+                    </a>
+                </div>
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/57e0b881dd.js" crossorigin="anonymous"></script>
         <script src="js/collapsible.js"></script>
+        <script src="js/combobox.js"></script>
+        <script src="js/datepicker.js"></script>
     </body>
 </html>
 
 <!-- <a href="[Placeholder Link]" rel="noopener noreferer" target="_blank">[Placeholder Text]</a> -->
-
-
-<!-- <li>[Placeholder Text]
-    <ul>
-        <li>[Placeholder Text]</li>
-    </ul>
-</li> -->
