@@ -152,3 +152,8 @@ footer ul {
 #wcagIconContainer {
   display: block;
 }
+
+/* Form Styles */
+.asteriskColor {
+  color: red;
+}

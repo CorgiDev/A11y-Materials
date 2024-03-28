@@ -1,0 +1,17 @@
+/* Cert Table */
+table, th, td {
+    border: 1px solid #af5920;
+}
+
+img.certBadge {
+    max-width: 175px;
+    padding-right: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+th {
+    background-color: #ac734d86;
+}
