@@ -1,0 +1,17 @@
+/* Accessibility Stylings */
+[aria-current]:not([aria-current="false"]) {
+    font-weight: bold;
+    padding: 3px;
+    border: solid 4px #211106;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin: -1px;
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/foundation-icons.css">
+        <link rel="stylesheet" href="css/a11y.css">
+        <link rel="stylesheet" href="css/table.css">
+        <link rel="stylesheet" href="css/combobox.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/mixedStateCheckbox.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <title>Testing Pages | Accessibility Presentation</title>
+    </head>
+    <body>
+        <header>
+            <div id="skipContentDiv">
+                <a href="#mainContent" id="skip-content">Skip to main content</a>
+            </div>
+            <nav aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="testing.html" aria-current="page">Testing</a></li>
+                    <li><a href="resources.html">More Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="breadcrumbs" aria-label="Navigation Breadcrumbs">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house fa-lg" id="navHouse"></i><span class="sr-only">Home</span></a></li>
+                <li><i class="fa-solid fa-chevron-right fa-lg"></i> Testing Page</li>
+            </ul>
+        </nav>
+
+        <main id="mainContent">
+            <h1>Testing Page</h1>
+            <p>This site will have a set of test pages you can use to test a variety of screen reader commands and behaviors. Testing sections include:</p>
+            <ol>
+              <li><a href="#formHeading">Form Components</a></li>
+              <li><a href="#tableHeading">Table Elements</a></li>
+              <li><a href="#buttonsVLinksHeading">Buttons versus Links</a></li>
+            </ol>
+             
+            <section aria-labelledby="formHeading">
+                <h2 id="formHeading">Form Components</h2>
+                <p>The following is a test form with:</p>
+
+                <ol>
+                  <li>First Name text input field with an <code>autocomplete</code> attribute set to <code>given-name</code>.</li>
+                  <li>Last Name text input field with an <code>autocomplete</code> attribute set to <code>family-name</code>.</li>
+                  <li>A Date Picker Combobox comprised of an editable date input combobox that opens a dialog containing a calendar grid and buttons for navigating by month and year.</li>
+                  <li>A Radio Group comprised of multiple radio buttons in a fieldset.</li>
+                  <li>A Two-State Checkbox Group made out of divs and checkboxes where each checkbox can be checked or unchecked.</li>
+                  <li>A Mixed-State Checkbox Group built with a fieldset and checkboxes where each checkbox is able to be in one of 3 states (checked, unchecked, and partially checked).</li>
+                  <li>Select-Only Combobox that functions similar to an HTML <code>select</code> element.</li>
+                </ol>
+                
+                <p>Some of these form elements were sourced from the W3C WAI <a href="https://www.w3.org/WAI/ARIA/apg/" rel="noopener noreferer" target="_blank">ARIA Authoring Practices Guide (APG) <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a>.</p>
+                <p>When formatting a form that uses radio buttons and checkboxes, it is important to remember that these elements serve different semantic purposes, and should not be used inetrchangeably. <b>Radio Options</b> are meant to be used when only one option is allowed to be selected. <b>Checkboxes</b> are meant to be used when multiple options are meant to be selectable. However, Checkboxes can also be toggled between more states.</p> 
+                <p>You can learn more on the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/radio/" target="_blank" rel="noopener noreferer">Radio Group Pattern page <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a> and the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/" rel="noopener noreferer" target="_blank">Checkbox Design Pattern page<i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a> of the W3C WAI APG.</p>
+                
+                <form>
+                  <p><span class="asteriskColor" aria-hidden="true">*</span> = <span id="requiredAttribute">Required Field</span></p>
+                  <!-- Inputs with autocomplete set -->
+                    <label for="fname">First Name: <span class="asteriskColor" aria-hidden="true">*</span></label><br>
+                    <input type="text" id="fname" name="fname" autocomplete="given-name" aria-describedby="requiredAttribute" required><br>
+                    <br>
+                    <label for="lname">Last name: <span class="asteriskColor" aria-hidden="true">*</span></label><br>
+                    <input type="text" id="lname" name="lname" autocomplete="family-name" aria-describedby="requiredAttribute" required>
+                    <br>
+
+                    <!-- Date Picker -->
+                    <div id="myDatepicker" class="combobox-datepicker">
+                        <div class="label">
+                          <label id="id-label-1" for="cb-textbox-1"> Date </label>
+                        </div>
+                      
+                        <div class="group">
+                          <input type="text" id="cb-textbox-1" aria-autocomplete="none" role="combobox" aria-expanded="false" aria-haspopup="dialog" aria-controls="cb-dialog-1" aria-describedby="cb-description-1">
+                      
+                          <span class="desc" id="cb-description-1">(date format: mm/dd/yyyy)</span>
+                          <button type="button" class="arrow" tabindex="-1" aria-label="Choose Date">
+                            <span>
+                              <svg width="18" height="16" aria-hidden="true" focusable="false">
+                                <polygon points="2,4 16,4 9,14"></polygon>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      
+                        <div id="cb-dialog-1" class="dialog" role="dialog" aria-modal="true" aria-label="Choose Date">
+                          <div class="header">
+                            <button type="button" class="prev-year" aria-label="previous year">
+                              <span class="fas fa-angle-double-left fa-lg"></span>
+                            </button>
+                      
+                            <button type="button" class="prev-month" aria-label="previous month">
+                              <span class="fas fa-angle-left fa-lg"></span>
+                            </button>
+                      
+                            <h3 id="cb-grid-label" class="month-year" aria-live="polite">December 2020</h3>
+                      
+                            <button type="button" class="next-month" aria-label="next month">
+                              <span class="fas fa-angle-right fa-lg"></span>
+                            </button>
+                      
+                            <button type="button" class="next-year" aria-label="next year">
+                              <span class="fas fa-angle-double-right fa-lg"></span>
+                            </button>
+                          </div>
+                      
+                          <div class="table-wrap"><table class="dates" role="grid" aria-labelledby="cb-grid-label">
+                            <thead>
+                              <tr>
+                                <th scope="col" abbr="Sunday">Su</th>
+                                <th scope="col" abbr="Monday">Mo</th>
+                                <th scope="col" abbr="Tuesday">Tu</th>
+                                <th scope="col" abbr="Wednesday">We</th>
+                                <th scope="col" abbr="Thursday">Th</th>
+                                <th scope="col" abbr="Friday">Fr</th>
+                                <th scope="col" abbr="Saturday">Sa</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td tabindex="-1" data-date="2020-02-01">1</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="-1" data-date="2020-02-02">2</td>
+                                <td tabindex="-1" data-date="2020-02-03">3</td>
+                                <td tabindex="-1" data-date="2020-02-04">4</td>
+                                <td tabindex="-1" data-date="2020-02-05">5</td>
+                                <td tabindex="-1" data-date="2020-02-06">6</td>
+                                <td tabindex="-1" data-date="2020-02-07">7</td>
+                                <td tabindex="-1" data-date="2020-02-08">8</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="-1" data-date="2020-02-09">9</td>
+                                <td tabindex="-1" data-date="2020-02-10">10</td>
+                                <td tabindex="-1" data-date="2020-02-11">11</td>
+                                <td tabindex="-1" data-date="2020-02-12">12</td>
+                                <td tabindex="-1" data-date="2020-02-13">13</td>
+                                <td role="gridcell" aria-selected="true" data-date="2020-02-14">14</td>
+                                <td tabindex="-1" data-date="2020-02-15">15</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="-1" data-date="2020-02-16">16</td>
+                                <td tabindex="-1" data-date="2020-02-17">17</td>
+                                <td tabindex="-1" data-date="2020-02-18">18</td>
+                                <td tabindex="-1" data-date="2020-02-19">19</td>
+                                <td tabindex="-1" data-date="2020-02-20">20</td>
+                                <td tabindex="-1" data-date="2020-02-21">21</td>
+                                <td tabindex="-1" data-date="2020-02-22">22</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="-1" data-date="2020-02-23">23</td>
+                                <td tabindex="-1" data-date="2020-02-24">24</td>
+                                <td tabindex="-1" data-date="2020-02-25">25</td>
+                                <td tabindex="-1" data-date="2020-02-26">26</td>
+                                <td tabindex="-1" data-date="2020-02-27">27</td>
+                                <td tabindex="-1" data-date="2020-02-28">28</td>
+                                <td tabindex="-1" data-date="2020-02-29">29</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="-1" data-date="2020-02-30">30</td>
+                                <td tabindex="-1" data-date="2020-02-31">31</td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                                <td class="disabled" tabindex="-1"></td>
+                              </tr>
+                            </tbody>
+                          </table></div>
+                      
+                          <div class="dialog-ok-cancel-group">
+                            <button type="reset" class="dialog-button" value="cancel">Cancel</button>
+                            <button type="submit" class="dialog-button" value="ok">OK</button>
+                          </div>
+                      
+                          <div class="dialog-message" aria-live="polite"></div>
+                        </div>
+                      </div>
+                    <br>
+                    <br>
+
+                    <!-- Radio group -->
+                    <fieldset>
+                        <legend>What is your highest level of education attained:</legend>
+                        <div>
+                            <input type="radio" id="highschool" name="highschool" value="highschool" />
+                            <label for="highschool">High School</label>
+                          </div>
+                        
+                          <div>
+                            <input type="radio" id="someCollege" name="someCollege" value="someCollege" />
+                            <label for="someCollege">Some College</label>
+                          </div>
+
+                          <div>
+                            <input type="radio" id="certificate" name="certificate" value="certificate" />
+                            <label for="certificate">Certificate</label>
+                          </div>
+
+                          <div>
+                            <input type="radio" id="assocDegree" name="assocDegree" value="assocDegree" />
+                            <label for="assocDegree">Associates Degree</label>
+                          </div>
+
+                          <div>
+                            <input type="radio" id="bachDegree" name="bachDegree" value="bachDegree" />
+                            <label for="bachDegree">Bachelors Degree</label>
+                          </div>
+
+                          <div>
+                            <input type="radio" id="mastersDegree" name="mastersDegree" value="mastersDegree" />
+                            <label for="mastersDegree">Masters Degree</label>
+                          </div>
+
+                          <div>
+                            <input type="radio" id="drDegree" name="drDegree" value="drDegree" />
+                            <label for="drDegree">Doctorate Degree</label>
+                          </div>
+                    </fieldset>
+                    <br>
+                    
+                    <!-- Two-State Checkmark Group -->
+                    <fieldset id="twoState">
+                        <legend>Do you enjoy any of the following video game genres? (Select all that apply)</legend>
+                        <div>
+                            <input type="checkbox" id="rpgGenre" name="rpgGenre" />
+                            <label for="rpgGenre">Role Playing Games (RPG)</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="fpsGenre" name="fpsGenre" />
+                            <label for="fpsGenre">First-Person Shooter (FPS)</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="Racing" name="Racing" />
+                            <label for="Racing">Racing</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="adventureGenre" name="adventureGenre" />
+                            <label for="adventureGenre">Adventure</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="fightingGenre" name="fightingGenre" />
+                            <label for="fightingGenre">FIghting</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="pltformerGenre" name="pltformerGenre" />
+                            <label for="pltformerGenre">Platformer</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="sportGenre" name="sportGenre" />
+                            <label for="sportGenre">Sport</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="exerciseGenre" name="exerciseGenre" />
+                            <label for="exerciseGenre">Exercise</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="noGenre" name="noGenre" />
+                            <label for="noGenre">None of the above</label>
+                          </div>
+                    </fieldset>
+                    <br>
+
+                    <!-- Mixed-State Checkmark Group -->
+                    <fieldset class="checkbox-mixed">
+                      <legend>Sandwich Condiments</legend>
+                      <div role="checkbox" class="group_checkbox" aria-checked="mixed" aria-controls="cond1 cond2 cond3 cond4" tabindex="0">All condiments</div>
+                      <ul class="checkboxes">
+                        <li><label><input type="checkbox" id="cond1">Lettuce</label></li>
+                        <li><label><input type="checkbox" id="cond2" checked="">Tomato</label></li>
+                        <li><label><input type="checkbox" id="cond3">Mustard</label></li>
+                        <li><label><input type="checkbox" id="cond4">Sprouts</label></li>
+                      </ul>
+                    </fieldset>
+                            
+                    <br>
+
+                    <!-- Drop-down Selection element-->
+                    <label id="combo1-label" class="combo-label">Favorite Fruit</label>
+                    <div class="combo js-select">
+                        <div aria-controls="listbox1" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="combo1-label" id="combo1" class="combo-input" role="combobox" tabindex="0"></div>
+                        <div class="combo-menu" role="listbox" id="listbox1" aria-labelledby="combo1-label" tabindex="-1"></div>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <hr>
+            
+            <section aria-labelledby="tableHeading">
+                <h2 id="tableHeading">Table Element</h2>
+                <p>The following is a table with column and row headers set using table header (<code>&lt;th&gt;</code>), elements. Scope is also defined using <code>headers</code> attributes.</p>
+
+                <table>
+                  <tr>
+                      <th id="titleCol">Certification Title</th><th id="dateCol">Date Issued</th><th id="issuerCol">Issued By</th><th id="expirationCol">Expiration Date</th><th id="verifyCol">Verification Information</th><th id="iconCol">Badge or Icon</th>
+                  </tr>
+                  <tr>
+                      <th id="row1" headers="titleCol">Developer Technologies MVP 2023</th>
+                      <td headers="row1 dateCol">March 11th, 2024</td>
+                      <td headers="row1 issuerCol"><a href="https://www.credly.com/organizations/microsoft-student-programs/badges" rel="noreferrer noopener" target="_blank">Microsoft MVP and Student Ambassadors Communities <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row1 expirationCol">Not Applicable</td>
+                      <td headers="row1 verifyCol"><a href="https://www.credly.com/badges/a769c307-085f-423b-902a-d29ee0245ac6/public_url" rel="noreferrer noopener" target="_blank">Verify Developer Technologies MVP 2023 on Credly <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row1 iconCol"><img src="img/credlyBadges/MVP420x420.webp" alt="Microsoft Most Valuable Professional - MVP 2023 Badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row2" headers="titleCol">Accessibility in Action Badge</th>
+                      <td headers="row2 dateCol">April 27th, 2020</td>
+                      <td headers="row2 issuerCol"><a href="https://www.credly.com/organizations/microsoft-accessibility/badges" rel="noreferrer noopener" target="_blank">Microsoft Accesibility <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row2 expirationCol">Not Applicable</td>
+                      <td headers="row2 verifyCol"><a href="https://www.credly.com/badges/9ec7ba1a-3b7d-4c35-9ca7-399b9ed8430d/public_url" rel="noreferrer noopener" target="_blank">Verify Accessibility in Action on Credly <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row2 iconCol"><img src="img/credlyBadges/accessibility-in-action.webp" alt="Achievement in Accessibility - Accessibility in Action Badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row3" headers="titleCol">Trusted Tester</th>
+                      <td headers="row3 dateCol">July 8th, 2020</td>
+                      <td headers="row3 issuerCol"><a href="https://www.dhs.gov/office-accessible-systems-technology" rel="noreferrer noopener" target="_blank">Department of Homeland Security Office of Accessible Systems & Technology <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row3 expirationCol">Not Applicable</td>
+                      <td headers="row3 verifyCol"><b>Trusted Tester Certification Number:</b> TT-2007-01048</td>
+                      <td headers="row3 iconCol"><img src="img/credlyBadges/TT-Trademark.webp" alt="Certified Department of Homeland Security Trusted Tester Badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row4" headers="titleCol">AZ-900: Azure Fundamentals Certification</th>
+                      <td headers="row4 dateCol">June 20th, 2021</td>
+                      <td headers="row4 issuerCol"><a href="https://www.credly.com/organizations/microsoft-certification/badges" rel="noreferrer noopener" target="_blank">Microsoft <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row4 expirationCol">June 20th, 2023</td>
+                      <td headers="row4 verifyCol"><a href="https://www.credly.com/badges/3d280f13-a12d-4855-b526-cf8ce683e5b9/public_url" rel="noreferrer noopener" target="_blank">Verify AZ-900 Certification on Credly <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row4 iconCol"><img src="img/credlyBadges/azure-fundamentals-600x600.webp" alt="Azure Fundamentals Badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row5" headers="titleCol">Diveristy, Equity, and Inclusion in the Workplace Certificate</th>
+                      <td headers="row5 dateCol">May 5th, 2021</td>
+                      <td headers="row5 issuerCol"><a href="https://www.credly.com/organizations/university-of-south-florida/badges" rel="noreferrer noopener" target="_blank">University of South Florida Muma College of Business <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row5 expirationCol">Not Applicable</td>
+                      <td headers="row5 verifyCol"><a href="https://www.credly.com/badges/ef38c2a7-0c37-4886-8de9-f47179921472/public_url" rel="noreferrer noopener" target="_blank">Verify Diversity, Equity, and Inclusion certificate on Credly <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row5 iconCol"><img src="img/credlyBadges/muma-diversity-equity-inclusion-badge.webp" alt="Diversity, Equity, and Inclusion in the Workplace badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row6" headers="titleCol">Inclusive and Ethical Leadership Certificate</th>
+                      <td headers="row6 dateCol">November 15th, 2021</td>
+                      <td headers="row6 issuerCol"><a href="https://www.credly.com/organizations/university-of-south-florida/badges" rel="noreferrer noopener" target="_blank">University of South Florida Muma College of Business <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row6 expirationCol">Not Applicable</td>
+                      <td headers="row6 verifyCol"><a href="https://www.credly.com/badges/7f12680f-5e10-444a-b53c-cf7ec78a7f89/public_url" rel="noreferrer noopener" target="_blank">Verify Inclusive and Ethical Leadership Certificate on Credly <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row6 iconCol"><img src="img/credlyBadges/muma-inclusive-ethical-leadership-badge.webp" alt="Inclusive and Ethical Leadership badge" class="certBadge"></td>
+                  </tr>
+                  <tr>
+                      <th id="row7" headers="titleCol">WAI0.1x: Introduction to Web Accessibility</th>
+                      <td headers="row7 dateCol">January 3rd, 2022</td>
+                      <td headers="row7 issuerCol"><a href="https://w3cx.org/" rel="noreferrer noopener" target="_blank">W3Cx <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row7 expirationCol">Not Applicable</td>
+                      <td headers="row7 verifyCol"><a href="https://courses.edx.org/certificates/5342766b508b4fdcab229c54cad28b46" rel="noreferrer noopener" target="_blank">Verify Introduction to Web Accessibility certificate on edX <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a></td>
+                      <td headers="row7 iconCol">No badge available</td>
+                  </tr>
+              </table>
+            </section>
+            <hr>
+            
+            <section aria-labelledby="buttonsVLinksHeading">
+              <h2 id="buttonsVLinksHeading"> Buttons versus Links</h2>
+              <p>Buttons and links, like checkboxes and radio options, are not interchangeable even though people love to use them interchangeably.</p>
+              <p><b>Buttons</b> are meant to trigger an action or event (i.e., open modals/dialog, submit forms, cancel an action, expand a component, etc.). <b>Links</b> are meant to navigate to a target resource internal or external (i.e., a link to a spot within a page, to a PDF file, to an external site, or to another page within the site.).</p>
+              <p>You can learn more on the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/link/" target="_blank" rel="noopener noreferer">Link Pattern page <i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a> and the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/button/" rel="noopener noreferer" target="_blank">Button Pattern page<i class="fa-solid fa-arrow-up-right-from-square newWindowIcon" aria-hidden="true"></i><span class="sr-only">Opens in new window</span></a> of the W3C WAI APG.</p>
+
+              <!-- Trigger/Open The Modal -->
+              <button id="myBtn">Open an example modal</button>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>You opened a modal with a button element.</p>
+                </div>
+              </div>
+              <br>
+              <br>
+              <a href="#mainContent">Return to Top of Page</a>
+
+          </section>
+          <hr>
+        </main>
+        <footer>
+            <hr>
+            <nav aria-label="Footer Social Links">
+                <ul>
+                    <li><a href="https://www.buymeacoffee.com/TheCorgiDev" aria-label="Buy CorgiDev a Coffee (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-duotone fa-cup-togo fa-2x social-icon"></i></a></li>
+                    <li><a href="http://a11y.info/@CorgiDev" aria-label="CorgiDev on Mastodon (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-mastodon fa-2x social-icon"></i></a></li>
+                    <li><a href="http://facebook.com/corgidev" aria-label="Corgidev on Facebook (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fab fa-facebook-square fa-2x social-icon"></i></a></li>
+                    <li><a href="https://www.instagram.com/corgidev/" aria-label="Corgidev Instagram (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fab fa-instagram fa-2x social-icon"></i></a></li>
+                    <li><a href="https://www.youtube.com/@CorgiDev" aria-label="Corgidev on YouTube (Opens in new window)" rel="noreferrer noopener" target="_blank"><i class="fa-brands fa-youtube fa-2x social-icon"></i></a></li>
+                </ul>
+            </nav>
+            <div id="footerExtraContent">
+                <p>Website created and maintained by Erissa Duvall aka CorgiDev since 2017.</p>
+                <div id="wcagIconContainer">
+                    <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" id="wcagIcon" title="Explanation of WCAG 2 Level AA conformance">
+                        <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance, W3C WAI Web Content Accessibility Guidelines 2.1">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/57e0b881dd.js" crossorigin="anonymous"></script>
+        <script src="js/collapsible.js"></script>
+        <script src="js/combobox.js"></script>
+        <script src="js/datepicker.js"></script>
+        <script src="js/mixedState.js"></script>
+        <script src="js/modal.js"></script>
+    </body>
+</html>
+
+<!-- <a href="[Placeholder Link]" rel="noopener noreferer" target="_blank">[Placeholder Text]</a> -->
+
+
+<!-- <li>[Placeholder Text]
+    <ul>
+        <li>[Placeholder Text]</li>
+    </ul>
+</li> -->

@@ -1,0 +1,57 @@
+/* General Formatting */
+.logoHeader {
+    background-color: orange;
+}
+
+#logoHeader {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#logoImg {
+    max-width: 100px;
+    /* text-align: left; */
+    display: block;
+    margin: 10px auto;
+}
+
+#siteName {
+    display: block;
+    text-align: center;
+}
+
+/* Navigation Formatting */
+#navMain {
+    text-align: center;
+    margin: 10px auto;
+    background-color: tan;
+}
+
+#navMain ul {
+    list-style-type: none;
+
+}
+
+#navMain li {
+    display: inline;
+}
+
+#navMain li:first-of-type{
+    padding-right: 15px;
+}
+
+
+.navSecondary {}
+
+/* Header Formatting */
+.headerImg {
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main Section Formatting */
+main {
+
+}
