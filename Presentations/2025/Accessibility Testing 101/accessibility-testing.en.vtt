@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.96
+This first site is a "Good site" in that it has proper semantic HTML, accessible image labels, and proper use of the presentation role.
+
+00:00:05.97 --> 00:00:11.94
+This second site is a "Bad Site". It doesn't use semantic heading levels, incorrectly labels images, has an incorrect language attribute set for the page, and more that would make it far less accessible.
+
+00:00:11.95 --> 00:00:20.60
+
+The third site has no styles, no semantic HTML, and just overall looks like a horrible dumpster fire. All 3 have the same content otherwise.
+
+00:00:20.61 --> 00:00:30.23
+
+If I open the developer tools of the browser, and run the axe DevTools on each page.
+
+00:00:30.24 --> 00:00:58.10
+
+We see that each page shows zero reported issues.
+
+00:00:58.11 --> 00:1:00.32
+
+This is why automated testing shouldn't be the only testing you do.
