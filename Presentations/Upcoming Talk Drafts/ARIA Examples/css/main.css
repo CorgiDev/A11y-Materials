@@ -1,0 +1,16 @@
+/* Make the fake link accessible */
+span[role="link"] {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+span[role="link"]:hover,
+span[role="link"]:active,
+span[role="link"]:focus {
+  color: purple;
+}
+
+span[role="link"]:focus {
+  background-color: palegoldenrod;
+  outline: 1px dotted;
+}

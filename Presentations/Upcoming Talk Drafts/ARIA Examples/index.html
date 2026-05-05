@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARIA Examples</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body>
+        <h1>ARIA Examples</h1>
+        <p>Here are some examples of ARIA in action and how ARIA can cause problems if it is used in place of semantic elements:</p>
+            <span data-href="https://mozilla.org" role="link">Fake link created using a span</span>
+            <span data-href="https://mozilla.org" tabindex="0" role="link" class="accessibleFake">Fake accessible link created using a span</span>
+    </body>
+</html>
