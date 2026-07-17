@@ -1,0 +1,19 @@
+# Slash commands for issues
+# See https://github.com/marketplace/actions/custom-slash-commands for more details on making ones for pull requests.
+# Instances where `@{{ author }}` is used will target the person who used the slash command, not the original issue author.
+# --------------------------------------------
+issues:
+  exampleLinks:
+    comment: |
+      @{{ author }}
+
+      Please review the following resources:
+
+      - [WCAG Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
+      - [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+
+      This is just meant to serve as a test of the slash command functionality. Please ignore this comment.
+
+  labelIssue:
+    label:
+    - example-label
